@@ -135,7 +135,7 @@ nav .icons i:hover {
   text-shadow: 5px 10px 10px black;
 }
 
-#information .content-item {
+.content-item {
   display: flex;
   justify-content: left;
   align-items: center;
@@ -143,7 +143,7 @@ nav .icons i:hover {
   gap: 20px;
 }
 
-#information .content-item .off-deal {
+.content-item .off-deal {
   color: white;
   font-size: 18px;
   background-color: var(--color-accent);
@@ -153,14 +153,13 @@ nav .icons i:hover {
   display: inline-block;
 }
 
-#information .content-item .price {
+.content-item .price {
   font-size: 26px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-#information .content-item .price span {
+.content-item .price span {
   font-size: 32px;
 }
 
