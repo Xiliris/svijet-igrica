@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
 
   games.forEach((game) => {
     container.innerHTML += `
-            <a href="game.html?id=${game.id}">
+            <a href="pages/game.html?id=${game.id}">
                 <div class="game-splash">
                     <img src="${game.splash}" width="400px" height 200px/>
                     ${game.discount ? `<p>-${game.discount * 100}%</p>` : ""}

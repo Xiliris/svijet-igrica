@@ -1,0 +1,79 @@
+:root {
+  --color-main: aqua;
+  --color-accent: orangered;
+  --color-secondary: rgb(116, 116, 116);
+  --bg-gradient: linear-gradient(80deg, black, transparent);
+  --bg-main: #121212;
+}
+
+* {
+  color-scheme: dark;
+  margin: 0;
+  padding: 0;
+  font-family: "Modern Font", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#back-button {
+  color: var(--color-accent);
+  float: right;
+  transition: color 0.2s ease;
+}
+
+#back-button:hover {
+  color: var(--color-main);
+}
+
+#games-tab {
+  width: 70vw;
+  padding: 50px;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 24px;
+}
+
+#games-tab img {
+  width: 100%;
+  height: 50vh;
+  margin-top: 30px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+#games-tab h3 {
+  font-size: 32px;
+  font-weight: 100;
+}
+
+#games-tab .games-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+#games-tab .games-container .games-inner-container {
+  width: 50%;
+}
+
+#game-description {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
