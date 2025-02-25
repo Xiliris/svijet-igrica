@@ -18,20 +18,24 @@
   <body>
     <main>
       <section id="games-tab">
-        <a href="../index.html" id="back-button">
-          Back
-        </a>
-        <img src="https://placehold.co/600x400" alt="banner" id="game-splash"/>
+        <a href="../index.html" id="back-button"> Back </a>
+        <img src="https://placehold.co/600x400" alt="banner" id="game-splash" />
         <div class="games-container">
           <div class="games-inner-container">
-            <h3 id="game-title">Grand Theft Auto V</h3>
+            <h3 id="game-title" style="color: var(--color-main);">Grand Theft Auto V</h3>
             <div class="content-item">
-              <p class="off-deal" id="game-discount">-33%</i></p>
-              <p class="price" id="game-price"><span>$</span>20.69</p>
+              <p class="price">
+                <span id="original-price"></span>
+                <p class="off-deal" id="game-discount"></p>
+              </p>
             </div>
+            <span id="discounted-price"></span>
+            <p class="buy">Add to shopping cart</p>
           </div>
           <div class="games-inner-container">
-            <p id="game-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque similique ipsam recusandae voluptate pariatur aliquid cumque, repellat dolore illo fuga modi tempore. Voluptatem neque tempore laborum! Iure laborum nostrum veritatis!</p>
+            <p id="game-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque similique ipsam recusandae voluptate pariatur aliquid cumque, repellat dolore illo fuga modi tempore. Voluptatem neque tempore laborum! Iure laborum nostrum veritatis!
+            </p>
           </div>
         </div>
       </section>

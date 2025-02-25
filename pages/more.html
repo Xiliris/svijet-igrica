@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Games</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="more.css" />
+</head>
+<body>
+    <div class="search-filter">
+        <input type="text" id="search" placeholder="Search for a game..." />
+        <select id="filter">
+            <option value="all">All</option>
+            <option value="discount">Discounted</option>
+            <option value="free">Free Games</option>
+        </select>
+        <a href="../index.html" id="back-button"> Back </a>
+    </div>
+
+    <section id="games-collection" class="games-grid"></section>
+
+    <footer>
+        <p>Powered by <span>Lara Pataki</span></p>
+      </footer>
+
+    <script type="module" src="./more.js"></script>
+</body>
+</html>

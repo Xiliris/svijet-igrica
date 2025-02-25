@@ -2,7 +2,8 @@ import games from "../content.js";
 
 window.addEventListener("load", () => {
   const nameEl = document.getElementById("game-title");
-  const priceEl = document.getElementById("game-price");
+  const originalPriceEl = document.getElementById("original-price");
+  const discountedPriceEl = document.getElementById("discounted-price");
   const discountEl = document.getElementById("game-discount");
   const descriptionEl = document.getElementById("game-description");
   const splashEl = document.getElementById("game-splash");
@@ -12,25 +13,32 @@ window.addEventListener("load", () => {
 
   const selectedGame = games.find((game) => game.id === id);
 
-  const name = selectedGame.name;
-  const description = selectedGame.description;
-  const discount = selectedGame.discount;
-  const price = selectedGame.price;
-  const splash = selectedGame.splash;
+  if (!selectedGame) return;
+
+  const { name, description, discount, price, splash } = selectedGame;
 
   nameEl.innerText = name;
   descriptionEl.innerText = description;
   splashEl.src = `../${splash}`;
 
   if (price <= 0) {
-    priceEl.innerHTML = "Free";
+    originalPriceEl.innerText = "Free";
+    originalPriceEl.style.textDecoration = "none";
+    originalPriceEl.style.color = "white";
+    discountedPriceEl.style.display = "none";
+    discountEl.style.display = "none";
+  } else if (discount) {
+    const discountedPrice = price * (1 - discount);
+    originalPriceEl.innerHTML = `$${price.toFixed(2)}`;
+    originalPriceEl.style.textDecoration = "line-through";
+    originalPriceEl.style.color = "var(--color-secondary)";
+    discountedPriceEl.innerHTML = `<span>$</span>${discountedPrice.toFixed(2)}`;
+    discountEl.innerText = `-${discount * 100}%`;
   } else {
-    priceEl.innerHTML = `<span>$</span>${price}`;
-  }
-
-  if (discount) {
-    discountEl.innerText = discount;
-  } else {
+    originalPriceEl.innerHTML = `$${price.toFixed(2)}`;
+    originalPriceEl.style.textDecoration = "none";
+    originalPriceEl.style.color = "white"; 
+    discountedPriceEl.style.display = "none";
     discountEl.style.display = "none";
   }
 });

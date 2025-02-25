@@ -22,6 +22,12 @@
   padding: 0;
   font-family: "Modern Font", sans-serif;
   scroll-behavior: smooth;
+  caret-color: transparent;
+}
+
+::selection {
+  background-color: transparent;
+  color: white;
 }
 
 body {
@@ -65,6 +71,7 @@ nav h2 {
   color: var(--color-main);
   font-size: 18px;
   cursor: pointer;
+  
 }
 
 nav .icons {
@@ -87,6 +94,7 @@ nav .icons i:hover {
 .inner-container-width {
   width: 70vw;
   margin: 0 auto;
+  padding-bottom: 130px;
 }
 
 /* Hero Section */
@@ -193,6 +201,7 @@ nav .icons i:hover {
   position: absolute;
   top: 0;
   left: 0;
+  user-select: none;
 }
 
 .shape-divide {
@@ -247,7 +256,8 @@ nav .icons i:hover {
 
 /* Games section */
 
-#games-collection {
+#games-collection,
+#weekly-games-collection {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 30px;
@@ -255,22 +265,26 @@ nav .icons i:hover {
   margin-bottom: 100px;
 }
 
-#games-collection a {
+#games-collection a,
+#weekly-games-collection a {
   cursor: pointer;
   width: fit-content;
   max-width: 400px;
   margin: 0 auto;
 }
 
-#games-collection a:hover .game-splash {
+#games-collection a:hover .game-splash,
+#weekly-games-collection a:hover .game-splash {
   transform: scale(1.05);
 }
 
-#games-collection a:hover .game-splash p {
+#games-collection a:hover .game-splash p,
+#weekly-games-collection a:hover .game-splash p {
   opacity: 0;
 }
 
-#games-collection a .game-splash {
+#games-collection a .game-splash,
+#weekly-games-collection a .game-splash {
   position: relative;
   overflow: hidden;
   border-radius: 12px;
@@ -282,7 +296,8 @@ nav .icons i:hover {
   transition: all 0.3s ease;
 }
 
-#games-collection .game-splash img {
+#games-collection .game-splash img,
+#weekly-games-collection .game-splash img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -291,7 +306,8 @@ nav .icons i:hover {
   border-radius: 12px;
 }
 
-#games-collection .game-splash p {
+#games-collection .game-splash p,
+#weekly-games-collection .game-splash p {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -306,7 +322,8 @@ nav .icons i:hover {
   transition: all 0.2s ease;
 }
 
-#games-collection a .game-container {
+#games-collection a .game-container,
+#weekly-games-collection a .game-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -314,14 +331,16 @@ nav .icons i:hover {
   margin-top: 10px;
 }
 
-#games-collection a .game-container .game-name {
+#games-collection a .game-container .game-name,
+#weekly-games-collection a .game-container .game-name {
   flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-#games-collection a .game-container .game-price {
+#games-collection a .game-container .game-price,
+#weekly-games-collection a .game-container .game-price {
   text-align: right;
   flex: 0 0 auto;
   display: flex;
@@ -332,14 +351,16 @@ nav .icons i:hover {
   color: aqua;
 }
 
-#games-collection a .game-container p {
+#games-collection a .game-container p,
+#weekly-games-collection a .game-container p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 200px;
 }
 
-#games-collection a .game-container p span {
+#games-collection a .game-container p span,
+#weekly-games-collection a .game-container p span {
   font-size: 26px;
 }
 
