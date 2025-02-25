@@ -141,6 +141,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    margin-left: 10px;
   }
 
   #original-price {
@@ -152,6 +153,7 @@ main {
     font-weight: bold;
     color: var(--color-accent);
     float: left;
+    margin-left: 10px;
   }
 
   .buy {
@@ -163,10 +165,11 @@ main {
     background-color: var(--color-accent);
     border-radius: 5px;
     margin-top: 40px;
+    margin-left: 10px;
   }
 
   #game-description {
-    text-align: center;
+    text-align: left;
     font-size: 18px;
     padding: 10px;
   }

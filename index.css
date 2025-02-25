@@ -436,11 +436,13 @@ footer p span {
     width: 100%;
   }
 
-  #games-collection {
+  #games-collection,
+  #weekly-games-collection {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
 
-  #games-collection div {
+  #games-collection div,
+  #weekly-games-collection div {
     max-width: 300px;
   }
 
