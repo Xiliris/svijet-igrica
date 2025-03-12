@@ -1,4 +1,4 @@
-import games from "./content.js";
+import games from "./content-hr.js";
 
 window.addEventListener("load", () => {
     const mainContainer = document.getElementById("games-collection");
@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
     const discountedPrice = game.discount ? (game.price * (1 - game.discount)).toFixed(2) : game.price;
   
     mainContainer.innerHTML += `
-      <a href="pages/game.html?id=${game.id}">
+      <a href="pages/game-hr.html?id=${game.id}">
           <div class="game-splash">
               <img src="${game.splash}" width="400px" height="200px"/>
               ${game.discount ? `<p>-${game.discount * 100}%</p>` : ""}
@@ -29,7 +29,7 @@ window.addEventListener("load", () => {
     const discountedPrice = game.discount ? (game.price * (1 - game.discount)).toFixed(2) : game.price;
   
     weeklyContainer.innerHTML += `
-      <a href="pages/game.html?id=${game.id}">
+      <a href="pages/game-hr.html?id=${game.id}">
           <div class="game-splash">
               <img src="${game.splash}" width="400px" height="200px"/>
               ${game.discount ? `<p>-${game.discount * 100}%</p>` : ""}

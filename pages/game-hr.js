@@ -1,4 +1,4 @@
-import games from "../content.js";
+import games from "../content-hr.js";
 
 window.addEventListener("load", () => {
   const nameEl = document.getElementById("game-title");
